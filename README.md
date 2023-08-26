@@ -4,7 +4,11 @@ Official code of TECA: Text-Guided Generation and Editing of Compositional 3D Av
 The official code is coming soon.
 
 **Teaser**
-![contents](https://github.com/HaoZhang990127/TECA/blob/main/Teaser.pdf)
+<p align="center"> 
+<img src="Teaser.png">
+</p>
 
 **Method**
-![contents](https://github.com/HaoZhang990127/TECA/blob/main/Method.pdf)
+<p align="center"> 
+<img src="Method.png">
+</p>
