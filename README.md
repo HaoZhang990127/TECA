@@ -3,12 +3,12 @@ Official code of TECA: Text-Guided Generation and Editing of Compositional 3D Av
 
 The official code is coming soon.
 
-**Teaser**
+## Teaser
 <p align="center"> 
 <img src="Teaser.png">
 </p>
 
-**Method**
+## Method
 <p align="center"> 
 <img src="Method.png">
 </p>
