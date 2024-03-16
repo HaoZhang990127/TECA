@@ -1,0 +1,18 @@
+log:
+  exp_name: a man with bob cut hairstyle_skinning
+  # source avatar
+  exp_root_path: a man wearing a fez hat
+  eval_only: True
+
+optim:
+  # transferred hair asset
+  ckpt: ./experiments/a fat European woman with bob cut hairstyle refine/checkpoints/step_001000.pth
+
+nerfrender:
+  nerf_type: fine_tunning
+  skinning_eval: True
+  # refine in rgb space need large memory, if cuda out of memory, please use smaller fine_tunning_w and fine_tunning_h
+  num_steps: 96
+  upsample_steps: 16
+  fine_tunning_w: 120
+  fine_tunning_h: 120

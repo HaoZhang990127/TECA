@@ -1,0 +1,44 @@
+LOG_PREFIX = /home/hzhang/logs/teca/$(Cluster).$(Process)
+output  = $(LOG_PREFIX).out
+error   = $(LOG_PREFIX).err
+log     = $(LOG_PREFIX).log
+
+request_memory          = 32000M
+request_cpus            = 4
+request_gpus            = 1
+request_disk            = 30G
+
+on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)
+requirements = (TARGET.CUDAGlobalMemoryMb>30000) && (Machine =!= LastRemoteHost)
+# max_retries    = 3
+getenv = True
+
++MaxRunningPrice = 100
++RunningPriceExceededAction = "restart"
+
+executable = scripts/run_teca_hair.sh
+arguments = $(script) $(seed) $(B) $(C) $(D)
+
+hair
+script = scripts/run_hair_batch.py
+queue seed, B, C, D from (
+7, a_woman, wearing_a_red_hime_cut_hairstyle, wearing_a_green_hawaiian_shirt
+7, a_woman, wearing_a_white_crown_braid_hairstyle, wearing_a_black_hawaiian_shirt
+7, a_woman, wearing_a_bowl_cut_hairstyle, wearing_a_red_hawaiian_shirt
+7, a_woman, wearing_a_finger_waves_hairstyle, wearing_a_gray_long-sleeved_top
+7, a_woman, wearing_a_crown_braid_hairstyle, wearing_a_red_dress
+7, a_woman, wearing_a_bun_hairstyle, wearing_a_brown_singlet
+7, a_woman, wearing_a_yellow_crew_cut_hairstyle, wearing_a_red_pullover
+7, a_woman, wearing_a_gray_slicked-back_hairstyle, wearing_a_yellow_shirt
+7, a_woman, wearing_a_white_bowl_cut_hairstyle, wearing_a_pink_long_coat
+7, a_woman, wearing_a_yellow_full_crown_hairstyle_, wearing_a_yellow_shirt
+7, a_woman, wearing_a_green_spiky_hairstyle, wearing_a_brown_pullover
+7, a_woman, wearing_a_brown_rachel_hairstyle, wearing_a_blond_long-sleeved_top
+7, a_woman, wearing_a_blond_psychobilly_wedge_hairstyle, wearing_a_green_blazer
+7, a_woman, wearing_a_white_quiff_hairstyle, wearing_a_brown_long_coat
+7, a_woman, wearing_a_gray_crew_cut_hairstyle, wearing_a_pink_scarf
+7, a_woman, wearing_a_red_spiky_hairstyle, wearing_a_black_waistcoat
+7, a_woman, wearing_a_pink_undercut_hairstyle, wearing_red_overalls
+7, a_woman, wearing_a_pink_harvard_clip_hairstyle, wearing_a_gray_jumper
+7, a_woman, wearing_a_gray_french_braid_hairstyle, wearing_a_blond_sheath_dress
+)

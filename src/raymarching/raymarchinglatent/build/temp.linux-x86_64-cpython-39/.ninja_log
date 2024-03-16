@@ -1,0 +1,3 @@
+# ninja log v5
+3	13380	1684364293000000000	/lustre/home/hzhang/nerf_face/TEXTurePaper/src/raymarching/raymarchinglatent/build/temp.linux-x86_64-cpython-39/lustre/home/hzhang/nerf_face/TEXTurePaper/src/raymarching/raymarchinglatent/src/bindings.o	e473ab8dcb19188e
+3	40242	1684364320000000000	/lustre/home/hzhang/nerf_face/TEXTurePaper/src/raymarching/raymarchinglatent/build/temp.linux-x86_64-cpython-39/lustre/home/hzhang/nerf_face/TEXTurePaper/src/raymarching/raymarchinglatent/src/raymarching.o	552708ce9220c107

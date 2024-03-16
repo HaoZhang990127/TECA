@@ -1,0 +1,15 @@
+# **/.ipynb_checkpoints
+**/__pycache__
+*.mp4
+*.npy
+*.pth
+*.npz
+*.zip
+*.pkl
+*.pth
+*.dae
+*.tar
+data/*
+logs/*
+.idea
+*experiments

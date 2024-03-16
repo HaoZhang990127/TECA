@@ -1,0 +1,28 @@
+log:
+  exp_name: a man wearing a purple cardigan refine
+  exp_root_path: a man wearing a purple cardigan
+  save_interval: 100
+
+guide:
+  clipseg_text: clothes
+  geometry_text: 'a man wearing a purple cardigan and a purple hat, front view, ID photo, headshot, portrait, a virtual eigen photo, high resolution, high quality, high details'
+  paint_text: "a man wearing a purple cardigan and a purple hat, {} view, a virtual eigen photo, high resolution, high quality, high details, uniform lighting, studio lighting"
+  nerf_text: "a man wearing a purple cardigan, {} view, no watermark, a virtual eigen photo, high resolution, high quality, high details, uniform lighting, studio lighting"
+  blip_text: "a man wearing a purple cardigan, {} view, no watermark, a virtual eigen photo, high resolution, high quality, high details, uniform lighting, studio lighting"
+  geometry_neg_text: 'face out of frame, out of frame, ugly, tiling, poorly drawn face, out of frame, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face'
+  paint_neg_text: 'grey image, grey color, teeth, glasses, earrings, necklace, dirty, tattoos, floating artifacts, watermark, blur, glasses, ugly, tiling, out of frame, disfigured, deformed, bad anatomy, watermark, signature, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face'
+  nerf_neg_text: 'hair, face, beard, eyes, mouth, clothes, earrings, necklace, dirty, blur, floating artifacts, cartoon, watermark, low resolution, ugly, tiling, poorly drawn face, out of frame, disfigured, deformed, bad anatomy, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face'
+  blip_neg_text: 'hair, watermark, blur, face, beard, eyes, mouth, clothes, earrings, necklace, low resolution, dirty, tattoos, floating artifacts, ugly, tiling, poorly drawn face'
+    
+optim:
+  iters: 1000
+  seed: 38
+  ckpt: /home/hzhang/nerf_face/TEXTurePaper/experiments/a man wearing a purple cardigan/checkpoints/step_003000.pth
+
+nerfrender:
+  nerf_type: fine_tunning
+  # refine in rgb space need large memory, if cuda out of memory, please use smaller fine_tunning_w and fine_tunning_h
+  num_steps: 96
+  upsample_steps: 16
+  fine_tunning_w: 480
+  fine_tunning_h: 480

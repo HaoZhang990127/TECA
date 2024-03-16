@@ -1,0 +1,19 @@
+log:
+  exp_name: a fat European woman with bob cut hairstyle
+  exp_root_path: a fat European woman with bob cut hairstyle
+
+guide:
+  clipseg_text: hair
+  geometry_text: 'a fat European woman with bob cut hairstyle, front view, ID photo, headshot, portrait, a virtual eigen photo, high resolution, high quality, high details'
+  paint_text: "a fat European woman wearing a long sleeveless floral print dress with bob cut hairstyle, {} view, a virtual eigen photo, high resolution, high quality, high details, uniform lighting, studio lighting"
+  nerf_text: "a woman with bob cut hairstyle, {} view, no watermark, a virtual eigen photo, high resolution, high quality, high details, uniform lighting, studio lighting"
+  blip_text: "a woman with bob cut hairstyle, {} view, no watermark, a virtual eigen photo, high resolution, high quality, high details, uniform lighting, studio lighting"
+  geometry_neg_text: 'face out of frame, out of frame, ugly, tiling, poorly drawn face, out of frame, disfigured, deformed, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face'
+  paint_neg_text: 'grey image, grey color, teeth, glasses, earrings, dirty, tattoos, floating artifacts, watermark, blur, glasses, ugly, tiling, out of frame, disfigured, deformed, bad anatomy, watermark, signature, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face'
+  nerf_neg_text: 'face, beard, eyes, mouth, earrings, dirty, blur, floating artifacts, cartoon, watermark, low resolution, ugly, tiling, poorly drawn face, out of frame, disfigured, deformed, bad anatomy, low contrast, underexposed, overexposed, bad art, beginner, amateur, distorted face'
+  blip_neg_text: 'watermark, blur, face, beard, eyes, mouth, earrings, low resolution, dirty, tattoos, floating artifacts, ugly, tiling, poorly drawn face'
+  
+optim:
+  lambda_blip_sim: 0.0
+  iters: 3000
+  seed: 7

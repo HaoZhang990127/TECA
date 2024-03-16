@@ -1,0 +1,19 @@
+log:
+  exp_name: a fat European woman with bob cut hairstyle_animation
+  exp_root_path: a fat European woman with bob cut hairstyle
+  eval_only: True
+
+guide:
+  n_exp: 10
+  animate: True
+
+optim:
+  ckpt: ./experiments/a fat European woman with bob cut hairstyle refine/checkpoints/step_001000.pth
+  
+nerfrender:
+  nerf_type: fine_tunning
+  # refine in rgb space need large memory, if cuda out of memory, please use smaller fine_tunning_w and fine_tunning_h
+  num_steps: 16
+  upsample_steps: 16
+  fine_tunning_w: 50
+  fine_tunning_h: 50
