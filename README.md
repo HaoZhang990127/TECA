@@ -29,7 +29,7 @@
     <p/>
 <br/>
 <div align="center">
-    <img src="teaser.png" alt="Logo" width="100%">
+    <img src="Teaser.png" alt="Logo" width="100%">
 </div>
 
 TECA takes text as input combining mesh and NeRF representation methods to generate realistic editable and animtable avatars.
